@@ -144,11 +144,11 @@ def countmember():
     lit2.sort(reverse=True)
     return lit2
 def pygal():
-    """make a graph HorizontalBar """
+    """ Make a graph HorizontalBar """
     data = countmember()
     rank = data[0:7]
     line_chart = pg.HorizontalBar()
-    line_chart.title = 'Top 7 BNK48 member at 7-14 December 2018'
+    line_chart.title = 'Top 7 BNK48 member in 13-14 Dec 2018'
     for i in range(0,7):
         line_chart.add(rank[i][1], rank[i][0])
     line_chart.render_to_file('bnk48 graph.svg')
