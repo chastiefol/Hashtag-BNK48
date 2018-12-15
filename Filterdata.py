@@ -13,18 +13,19 @@ def main(tweets, member_dict):
                 tweets = removeRT(data[1])
 
                 if count_hashtags(tweets) != None: # Check Hashtags
-                    if count_hashtags(tweets) not in member_dict:
-                        member_dict[count_hashtags(tweets)] = 1
-                    else:
-                        member_dict[count_hashtags(tweets)] += 1
+                    for hashtag in count_hashtags(tweets):
+                        if hashtag not in member_dict:
+                            member_dict[hashtag] = 1
+                        else:
+                            member_dict[hashtag] += 1
     #print(sum(member_dict.values())) check how many tweets
-    #print(member_dict) use this to check dict
+    print(member_dict)
 def removeRT(tweet):
     """
     Remove the data if data is a retweets
     """
     if "RT" not in tweet[0:3]:
-        return tweet.capitalize()
+        return tweet.lower()
 
 
 def count_hashtags(tweet):
@@ -32,8 +33,15 @@ def count_hashtags(tweet):
     Check how many tweet with members hashtags
     """
     tweet = (re.findall(r"\B(\#[a-zA-Z0-9]+\b)(?!;)", tweet))
-    for hashtag in tweet:
-        return hashtag
+    if check_hashtag(tweet) != []:
+        return check_hashtag(tweet)
 
-
+def check_hashtag(tweets):
+    """ Check if hashtag include BNK48"""
+    for hashtag in tweets:
+        if hashtag[-5:] != 'bnk48':
+            tweets.remove(hashtag)
+        elif hashtag == '#bnk48':
+            tweets.remove(hashtag)
+    return tweets
 main('', {})
