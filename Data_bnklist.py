@@ -14,11 +14,11 @@ def RemoveRT():
     text = getCSV()
     lit = []
     count = 0
-    for i in text:
-        if i[0:2] == "RT":
+    for char in text:
+        if "RT" in char[0:3]:
             pass
         else:
-            lit.append(i.lower())
+            lit.append(char.lower())
     return lit
 
 def countmember():
