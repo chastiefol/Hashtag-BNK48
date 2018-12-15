@@ -1,6 +1,6 @@
 import csv
 import pandas as pd
-import pygal
+import pygal as pg
 def getCSV():
     """get csv function"""
     csvdf = pd.read_csv('C:/Users/WIN/Desktop/Project PSIT2/bnkdata.csv', encoding='utf-8')
@@ -78,108 +78,57 @@ def countmember():
     count_piam = 0
 
     for i in data:
-        if "#aombnk48" in i:
-            count_aom += 1
-        if "#bamboobnk48" in i:
-            count_bamboo += 1
-        if "#cakebnk48" in i:
-            count_cake += 1
-        if "#cherprangbnk48" in i:
-            count_cherprang += 1
-        if "#deeneebnk48" in i:
-            count_deenee += 1
-        if "#faiibnk48" in i:
-            count_faii += 1
-        if "#fifabnk48" in i:
-            count_fifa += 1
-        if "#fondbnk48" in i:
-            count_fond += 1
-        if "#gygeebnk48" in i:
-            count_gygee += 1
-        if "#izurinabnk48" in i:
-            count_izurina += 1
-        if "#jaabnk48" in i:
-            count_jaa += 1
-        if "#janebnk48" in i:
-            count_jane += 1
-        if "#jennisbnk48" in i:
-            count_jennis += 1
-        if "#jibbnk48" in i:
-            count_jib += 1
-        if "#junébnk48" in i:
-            count_june += 1
-        if "#kaewbnk48" in i:
-            count_kaew += 1
-        if "#kaimookbnk48" in i:
-            count_kaimook += 1
-        if "#katebnk48" in i:
-            count_kate += 1
-        if "#khaminbnk48" in i:
-            count_khamin += 1
-        if "#khengbnk48" in i:
-            count_kheng += 1
-        if "#kornbnk48" in i:
-            count_korn += 1
-        if "#mairabnk48" in i:
-            count_maira += 1
-        if "#mewnichbnk48" in i:
-            count_mewnich += 1
-        if "#mindbnk48" in i:
-            count_mind += 1
-        if "#minminbnk48" in i:
-            count_minmin += 1
-        if "#mioribnk48" in i:
-            count_miori += 1
-        if "#mobilebnk48" in i:
-            count_mobile += 1
-        if "#musicbnk48" in i:
-            count_music += 1
-        if "#myyubnk48" in i:
-            count_myyu += 1
-        if "#namneungbnk48" in i:
-            count_namneung += 1
-        if "#namsaibnk48" in i:
-            count_namsai += 1
-        if "#natherinebnk48" in i:
-            count_natherine += 1
-        if "#newbnk48" in i:
-            count_new += 1
-        if "#nikybnk48" in i:
-            count_niky += 1
-        if "#ninebnk48" in i:
-            count_nine += 1
-        if "#ninkbnk48" in i:
-            count_nink += 1
-        if "#noeybnk48" in i:
-            count_noey += 1
-        if "#oombnk48" in i:
-            count_oom += 1
-        if "#ornbnk48" in i:
-            count_orn += 1
-        if "#pakwanbnk48" in i:
-            count_pakwan += 1
-        if "#pandabnk48" in i:
-            count_panda += 1
-        if "#phukkhombnk48" in i:
-            count_phukkhom += 1
-        if "#piambnk48" in i:
-            count_piam += 1
-        if "#punbnk48" in i:
-            count_pun += 1
-        if "#pupebnk48" in i:
-            count_pupe += 1
-        if "#ratahbnk48" in i:
-            count_ratah += 1
-        if "#satchanbnk48" in i:
-            count_satchan += 1
-        if "#stangbnk48" in i:
-            count_stang += 1
-        if "#tarwaanbnk48" in i:
-            count_tarwaan += 1
-        if "#viewbnk48" in i:
-            count_view += 1
-        if "#weebnk48" in i:
-            count_wee += 1
+        count_aom += i.count("#aombnk48")
+        count_bamboo += i.count("#bamboobnk48")
+        count_cake += i.count("#cakebnk48")
+        count_cherprang += i.count("#cherprangbnk48")
+        count_deenee += i.count("#deeneebnk48")
+        count_faii += i.count("#faiibnk48")
+        count_fifa += i.count("#fifabnk48")
+        count_fond += i.count("#fondbnk48")
+        count_gygee += i.count("#gygeebnk48")
+        count_izurina += i.count("#izurinabnk48")
+        count_jaa += i.count("#jaabnk48")
+        count_jane += i.count("#janebnk48")
+        count_jennis += i.count("#jennisbnk48")
+        count_jib += i.count("#jibbnk48")
+        count_june += i.count("#junébnk48")
+        count_kaew += i.count("#kaewbnk48")
+        count_kaimook += i.count("#kaimookbnk48")
+        count_kate += i.count("#katebnk48")
+        count_khamin += i.count("#khaminbnk48")
+        count_kheng += i.count("#khengbnk48")
+        count_korn += i.count("#kornbnk48")
+        count_maira += i.count("#mairabnk48")
+        count_mewnich += i.count("#mewnichbnk48")
+        count_mind += i.count("#mindbnk48")
+        count_minmin += i.count("#minminbnk48")
+        count_miori += i.count("#mioribnk48")
+        count_mobile += i.count("#mobilebnk48")
+        count_music += i.count("#musicbnk48")
+        count_myyu += i.count("#myyubnk48")
+        count_namneung += i.count("#namneungbnk48")
+        count_namsai += i.count("#namsaibnk48")
+        count_natherine += i.count("#natherinebnk48")
+        count_new += i.count("#newbnk48")
+        count_niky += i.count("#nikybnk48")
+        count_nine += i.count("#ninebnk48")
+        count_nink += i.count("#ninkbnk48")
+        count_oom += i.count("#oombnk48")
+        count_orn += i.count("#ornbnk48")
+        count_pakwan += i.count("#pakwanbnk48")
+        count_panda += i.count("#pandabnk48")
+        count_phukkhom += i.count("#phukkhombnk48")
+        count_piam += i.count("#piambnk48")
+        count_pun += i.count("#punbnk48")
+        count_pupe += i.count("#pupebnk48")
+        count_ratah += i.count("#ratahbnk48")
+        count_satchan += i.count("#satchanbnk48")
+        count_stang += i.count("#stangbnk48")
+        count_tarwaan += i.count("#tarwaanbnk48")
+        count_view += i.count("#viewbnk48")
+        count_wee += i.count("#weebnk48")
+        count_noey += i.count("#noeybnk48")
 
     lit2 = [(count_aom,"aom"), (count_cake,"cake"), (count_bamboo,"bamboo"), (count_cherprang,"cherprang"), (count_deenee,"deenee"), \
     (count_faii,"faii"), (count_fifa,"fifa"), (count_fond,"fond"), (count_gygee, "gygee"), (count_izurina,"izurina"), \
@@ -199,10 +148,9 @@ def pygal():
     """made chart"""
     data = countmember()
     rank = data[0:7]
-    print(rank)
-#    line_chart = pygal.HorizontalBar()
-#    line_chart.title = 'Browser usage in February 2012 (in %)'
-#    for i in range(0,7):
-#        line_chart.add(rank[i][1], rank[i][0])
-#    line_chart.render('projjjjjj.svg')
+    line_chart = pg.HorizontalBar()
+    line_chart.title = 'Top 7 BNK48 member'
+    for i in range(0,7):
+        line_chart.add(rank[i][1], rank[i][0])
+    line_chart.render_to_file('BNK48graph.svg')
 pygal()
