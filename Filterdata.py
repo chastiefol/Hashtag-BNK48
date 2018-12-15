@@ -18,7 +18,7 @@ def main(tweets, member_dict):
                     else:
                         member_dict[count_hashtags(tweets)] += 1
     #print(sum(member_dict.values())) check how many tweets
-
+    #print(member_dict) use this to check dict
 def removeRT(tweet):
     """
     Remove the data if data is a retweets
