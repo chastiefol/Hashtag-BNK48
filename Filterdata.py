@@ -1,12 +1,13 @@
 
 import csv
 import re
+import pygal as pg
 
 def main(tweets, member_dict):
     """
     This is the function that ties every function to work together
     """
-    with open('bnkdata.csv', encoding='utf-8') as csvfile:
+    with open('C:/Users/WIN/Desktop/Project PSIT2/bnkdata.csv', encoding='utf-8') as csvfile:
         for data in csvfile:
             data = data.split(',')
             if removeRT(data[1]) != None: # Check if data is not None
@@ -21,8 +22,10 @@ def main(tweets, member_dict):
     #print(sum(member_dict.values())) use this to check how many tweets
     member_dict = sort_members_data(member_dict)
     member_dict = filter_member_data(member_dict)
-    print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()]))
-    print(member_dict)
+    chart = pygal(member_dict)
+    chart.render_to_file('BNK48graph.svg')
+    #print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()]))
+    #print(member_dict)
 def removeRT(tweet):
     """
     Remove the data if data is a retweets
@@ -71,4 +74,13 @@ def  filter_member_data(data):
             member_dict[hashtag] = data[hashtag]
     return member_dict
 
+def pygal(member):
+    """made chart"""
+    data = member
+    data_tuple = sorted(data.items() , reverse=True, key=lambda x: x[1])
+    line_chart = pg.HorizontalBar()
+    line_chart.title = 'Top 7 BNK48 member'
+    for i in range(0,7):
+        line_chart.add(data_tuple[i][0], data_tuple[i][1])
+    return line_chart
 main('', {})
