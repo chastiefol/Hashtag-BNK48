@@ -7,7 +7,7 @@ def main(tweets, member_dict):
     """
     This is the function that ties every function to work together
     """
-    with open('C:/Users/WIN/Desktop/Project PSIT2/bnkdata.csv', encoding='utf-8') as csvfile: #chang your path
+    with open('bnkdata.csv', encoding='utf-8') as csvfile: #chang your path
         for data in csvfile:
             data = data.split(',')
             if removeRT(data[1]) != None: # Check if data is not None
@@ -28,8 +28,8 @@ def main(tweets, member_dict):
     chart_horizontal.render_to_file('BNK48graph top 7.svg')
     chart_pie.render_to_file('BNK48graph all member.svg')
     #===============================================
-    #print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()]))
-    #print(member_dict)
+    #print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()])) check member dcit easy format
+    #print(member_dict) check member_dict
 def removeRT(tweet):
     """
     Remove the data if data is a retweets
@@ -91,7 +91,7 @@ def pygal_pie(data):
     """made pie chart"""
     data_tuple = sorted(data.items() , reverse=True, key=lambda x: x[1])
     pie_chart = pg.Pie()
-    pie_chart.title = 'All BNK48 member hastag'
+    pie_chart.title = 'All BNK48 member #hashtag'
     for i in range(0,51):
         pie_chart.add(data_tuple[i][0], data_tuple[i][1])
     return pie_chart
