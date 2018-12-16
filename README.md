@@ -61,9 +61,9 @@ main()
 
 ## Contributing
 
-|<img src="README/nanapoou.jpeg" width="150px" height="150px">|<img src="README/Paweennuch.jpeg" width="150px" height="150px">|<img src="README/SuraweeTedsakorn.jpeg" width="150px" height="150px">|<img src="README/chastiefol.jpeg" width="150px" height="150px">|
+|<img src="README/nanapoou.jpg" width="150px" height="150px">|<img src="README/Paweennuch.jpg" width="150px" height="150px">|<img src="README/SuraweeTedsakorn.jpg" width="150px" height="150px">|<img src="README/chastiefol.jpg" width="150px" height="150px">|
 |:-----:|:-----:|:-----:|:-----:|
-|[max180643](https://github.com/nanapoou)|[napatkrup](https://github.com/Paweennuch)|[rapeeza1598](https://github.com/SuraweeTedsakorn)|[snowneymotex](https://github.com/chastiefol)|
+|[nanapoou](https://github.com/nanapoou)|Paweennuch](https://github.com/Paweennuch)|[SuraweeTedsakorn](https://github.com/SuraweeTedsakorn)|[chastiefol](https://github.com/chastiefol)|
 #### Member list
 - นาย นายนวภูมิ แก้วมณี 61070102
 - นางสาว ปวีณนุช ตุ้ยใหม่ 61070120
