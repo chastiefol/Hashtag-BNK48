@@ -13,12 +13,14 @@ def main(tweets, member_dict):
                 tweets = removeRT(data[1])
 
                 if count_hashtags(tweets) != None: # Check Hashtags
-                    if count_hashtags(tweets) not in member_dict:
-                        member_dict[count_hashtags(tweets)] = 1
-                    else:
-                        member_dict[count_hashtags(tweets)] += 1
+                    for hashtag in count_hashtags(tweets):
+                        if hashtag not in member_dict:
+                            member_dict[hashtag] = 1
+                        else:
+                            member_dict[hashtag] += 1
     #print(sum(member_dict.values())) check how many tweets
-    #print(member_dict) use this to check dict
+    print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()]))
+
 def removeRT(tweet):
     """
     Remove the data if data is a retweets
@@ -26,14 +28,28 @@ def removeRT(tweet):
     if "RT" not in tweet[0:3]:
         return tweet.lower()
 
-
 def count_hashtags(tweet):
     """
     Check how many tweet with members hashtags
     """
-    tweet = (re.findall(r"\B(\#[a-zA-Z0-9]+\b)(?!;)", tweet))
-    for hashtag in tweet:
-        return hashtag
+    hashtags = (re.findall(r"\B(\#[a-zA-Z0-9]+\b)(?!;)", tweet))
+    if filter_hashtag(hashtags) != []:
+        return filter_hashtag(hashtags)
 
+def filter_hashtag(hashtags):
+    """ Check if hashtag include BNK48"""
+    # print('=============================================')
+    # print(hashtags)
+    ["#iknon", "#bnk48"]
+    payload = []
+    for hashtag in hashtags:
+        if hashtag[-5:] == 'bnk48' and hashtag != '#bnk48':
+            payload.append(hashtag)
+    return payload
+
+#def sort_members_data(data):
+    """
+    Sort member data
+    """
 
 main('', {})
