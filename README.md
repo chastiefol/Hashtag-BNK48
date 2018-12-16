@@ -16,11 +16,11 @@ Pygal
 
 ก่อนอื่นเรามาเรื่มรันตัว Streaming script ของเรากันก่อนเลย
 เราเริ่มต้นโดยการรัน streamingTwitter.py กันก่อน
-<img src='README/Streaming.jpg'>
+<img src='README/Streaming.jpeg'>
 โดยจะต้องใส่ Key API ของ Twitter ลงไปเองนะจ้ะ ทางเราให้ไม่ได้ TT
 
 หลังรันไปสักพัก เราจะเห็นตัวเลขขึ้นมามากมาย นั่นหมายถึงจำนวนข้อมูลที่เรา Stream มาได้นะจ้ะ
-<img src='README/Streamtest.jpg'>
+<img src='README/Streamtest.jpeg'>
 รูปที่แคปมาคือรันต่อจากไฟล์อันเก่านะจ้ะ มันเลยเป็น 6 หมื่นกว่าข้อมูล
 
 ## Contributing
