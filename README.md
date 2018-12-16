@@ -9,6 +9,7 @@
 Python3
 Tweepy
 Pygal
+Pandas
 ```
 
 ### เริ่มต้นกันเลย
@@ -163,7 +164,8 @@ def pygal_pie(data):
 หลังจากการ run และ render ออกมาแล้วก็จะได้ไฟล์ SVG ดังนี้
 <img src="BNK48graph.svg?sanitize=true">
 <img src="BNK48graph all member.svg?sanitize=true">
-
+โดย ที่มีคนพูดถึงมากที่สุดในช่วงประกาศผลด่วนเลือกตั้งได้แก่น้องโมบายล์นั่นเอง !!!
+<img src='README\mobile.jpg'>
 เสร็จสิ้นกันเรียบร้อยสำหรับการ Streaming ข้อมูลจากใน Twitter แล้วนำมาใช้เป็น Plot เป็นกราฟโดยใช้ pygal
 หวังว่าโปรเจคที่จัดทำขึ้นนี้ จะเป็นประโยชน์ต่อใครที่กำลังศึกษาการ Datamining และ การใช้ Python ไม่มากก็น้อย
 
