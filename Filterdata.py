@@ -19,6 +19,7 @@ def main(tweets, member_dict):
                         else:
                             member_dict[hashtag] += 1
     #print(sum(member_dict.values())) check how many tweets
+    member_dict = sort_members_data(member_dict)
     print("\n".join([(i + " = " + str(member_dict[i])) for i in member_dict.keys()]))
 
 def removeRT(tweet):
@@ -47,9 +48,14 @@ def filter_hashtag(hashtags):
             payload.append(hashtag)
     return payload
 
-#def sort_members_data(data):
+def sort_members_data(data):
     """
     Sort member data
     """
+    sort_data = sorted((value, key) for (key,value) in data.items())
+    members = {}
+    for member in sort_data[::-1]:
+        members[member[1]] = member[0]
+    return members
 
 main('', {})
