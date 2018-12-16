@@ -7,7 +7,7 @@ def main(tweets, member_dict):
     """
     This is the function that ties every function to work together
     """
-    with open('C:/Users/WIN/Desktop/Project PSIT2/bnkdata.csv', encoding='utf-8') as csvfile:
+    with open('C:/Users/WIN/Desktop/Project PSIT2/bnkdata.csv', encoding='utf-8') as csvfile: ##chang your path
         for data in csvfile:
             data = data.split(',')
             if removeRT(data[1]) != None: # Check if data is not None
