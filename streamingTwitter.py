@@ -21,7 +21,7 @@ def main ():
     access_secret = 'your_access_secret'      # put your access_secret from Twitter API
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
+    auth.set_access_token(access_token, access_secret)
 
     api = tweepy.API(auth)
 
